@@ -63,9 +63,53 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 
 | Azure Resource | Service Tier | Monthly Cost |
 | ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
+| *Azure Postgres Database* |Basic - Single Server |$65.08   |
+| *Azure Service Bus*   |Basic Service Plan - B1| $13.14       |
+| *App Service*         |Basic                  | $0.05        |
+| *Azure Functions*     |Consumption Tier       | ...          |
+| *Storage Accounts*    |Storage (general purpose v1)|...      |
 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+1. **Azure Postgres Database:**
+   - **Service Tier:** Basic - Single Server
+   - **Monthly Cost:** $65.08
+   - **Explanation:**
+     - The Basic tier is chosen for cost efficiency while meeting the database requirements.
+     - The Single Server option is suitable for smaller applications, providing a dedicated PostgreSQL server.
+     - This tier offers a balance between performance and cost for your database needs.
+
+2. **App Service:**
+   - **Service Tier:** Basic
+   - **Monthly Cost:** $0.05
+   - **Explanation:**
+     - The Basic tier is selected to keep costs low while meeting the needs of hosting the Flask-based web application.
+     - This tier provides sufficient resources for small to medium-sized applications.
+     - App Service offers easy deployment and scaling based on demand.
+
+3. **Azure Functions:**
+   - **Service Tier:** Consumption Tier
+   - **Monthly Cost:** (Not specified in the table)
+   - **Explanation:**
+     - The Consumption tier is chosen for Azure Functions to leverage the serverless architecture.
+     - This tier incurs costs based on actual consumption, making it cost-effective for sporadic workloads.
+     - Azure Functions handle background processing, such as notification tasks, in an event-driven manner.
+
+### Additional Considerations:
+
+- **Azure Service Bus:**
+  - **Service Tier:** Basic Service Plan - B1
+  - **Monthly Cost:** $13.14
+  - **Explanation:**
+    - The Basic Service Plan provides sufficient features for message queueing.
+    - B1 is selected for cost efficiency while meeting the needs of the application.
+    - Azure Service Bus facilitates asynchronous communication between the web app and Azure Functions.
+
+- **Storage Accounts:**
+  - **Service Tier:** Storage (general purpose v1)
+  - **Monthly Cost:** (Not specified in the table)
+  - **Explanation:**
+    - Storage Accounts are likely used for storing static assets, logs, or other data.
+    - General-purpose v1 is a standard storage tier suitable for various storage needs.
+    - The cost depends on the amount of data stored and operations performed.
+
+This architecture enables efficient handling of user interactions, background processing, and communication between components, ensuring a cost-effective and scalable solution for the application.

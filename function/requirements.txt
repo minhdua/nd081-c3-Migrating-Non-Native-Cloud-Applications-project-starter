@@ -1,0 +1,6 @@
+azure-functions
+psycopg2
+psycopg2-binary
+python-http-client
+sendgrid
+starkbank-ecdsa
