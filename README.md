@@ -66,8 +66,8 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 | *Azure Postgres Database* |Basic - Single Server |$65.08   |
 | *Azure Service Bus*   |Basic Service Plan - B1| $13.14       |
 | *App Service*         |Basic                  | $0.05        |
-| *Azure Functions*     |Consumption Tier       | ...          |
-| *Storage Accounts*    |Storage (general purpose v1)|...      |
+| *Azure Functions*     |Consumption Tier       | $0          |
+| *Storage Accounts*    |Storage (general purpose v1)|$0.018      |
 
 ## Architecture Explanation
 1. **Azure Postgres Database:**
